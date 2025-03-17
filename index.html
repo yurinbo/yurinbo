@@ -3,86 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Brawl stars</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Adlam+Unjoined:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-
-        <div class="face">
-            <div class="imagem">
-                <a href="#">
-                    <img id="tamanho" src="imagens/logonew.png" alt="Logo"
-                    width="100" height="100">
-                </a>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/mundo.png">
             </div>
-
-            <nav class="menu">
-                <ul>
-                    <li><a href="#inicio">Inico</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#Informaçao">Informaçao</a></li>
-                    <li><a href="#">Novidades</a></li>
-                </ul>
+            <nav class="nav-menu">
+                <a href="#"></a>
+                <a href="#sobre2">Sobre</a>
+                <a id="button" href="#cadastro">Cadastro</a>
             </nav>
-
-            <div class="btn-contato">
-            <a href="https://support.supercell.com/brawl-stars/pt/articles/contact-us.html">
-                <button>Contato</button>
-            </a>
-            </div>
-
         </div>
-        
     </header>
-    
-        <section id="inicio" class="topo imagen">
-            <div>
-                <div class="flex">
-                    <div class="texttop">
-                        <h1> BRAWL STARS E SUAS <span>NOVIDADES</span></h1>
-                        <P>Em Brawl Stars você deve controlar um soldado, uma unidade comum, que atira com sua arma na mão, enquanto coopera com sua equipe, para vencer o time adversário. O jogo permite destravar personagens diversos, conforme Clash Royale, mas com um esquema diferenciado, a partir de recompensas diretas, das partidas.</P>
-                        <hr>
-                            <div class="btn-contato">
-                                <a href="https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=pt_BR&pli=1">
-                                    <button>Jogar</button>
-                                </a>
-                            </div>
-                    </div>
-                    <div class="imgfoto">
-                        <img src="imagens/fotos.png" alt=""
-                        width="85%" height="85%">
-                    </div>
+
+    <section class="mensag" id="mensagem">
+        <div class="aviso">
+            <p>CADASTRO REALIZADO COM SUCESSO!</p>
+            <img src="img/correto.png" alt=""/>
+        </div>
+    </section>
+
+    <section id="sobre2" class="sobre">
+        <div class="sobre-posi">
+            <div class="textos">
+                <h1>Bem-vindo à nossa <mark>Loja Online!</mark></h1>
+                <p>Aqui na nossa loja online, queremos tornar sua experiência de compra o mais simples e agradável possível. Oferecemos uma grande variedade de produtos e promoções para você aproveitar.
+                    Ao se cadastrar, você pode aproveitar vantagens como um processo de compra mais rápido, acesso a ofertas exclusivas e um histórico de pedidos personalizado. Além disso, você será o primeiro a saber das novidades e lançamentos.
+                    Não perca tempo! Faça seu cadastro e comece a explorar tudo o que nossa loja tem a oferecer.</p>
+            </div>
+            <div class="humano">
+                <img src="img/humano.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="cadastro" class="interface">
+        <div class="formulario">
+            <div class="conteudo">
+                <div id="imgs">
+                    <img src="img/enviar.png" alt=""/>
+                </div>
+                <div class="text">
+                    <p>CADASTRE-SE</p>
                 </div>
             </div>
-        </section>
-
-        <section id="sobre" class="celular">
-            <div class="flex meio">
+            <div class="form">
+                <form class="estilo-form" method="post" action="/receber_dados.php">
+                    <div class="input1">
+                        <p>Nome</p>
+                        <input type="text" name="nome" placeholder="Digite seu Nome aqui"required maxlength="40">
+                    </div>
+                    <div class="input1">
+                        <p>E-Mail</p>
+                        <input type="email" name="email" placeholder="Digite seu e-mail"required>
+                    </div>
+                    <div class="input1">
+                        <p>CPF</p>
+                        <input id="cpff" type="text" autocomplete="off" name="cpf" placeholder="Digite seu CPF" maxlength="14"
+                        oninput="this.value = this.value.replace(/[^0-9.-]/g, '')">
+                    </div>
+                    <div class="input1">
+                        <p>Sexo</p>
+                        <select id="EstadoCivil" name="EstadoCivil">
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option >
+                            <option value="2">Prefiro não dizer</option >
+                        </select>
+                    </div>
+                    <div class="input2">
+                        <p class="pp">Escolha seu tipo de conta</p>
+                        <div class="radios">
+                            <div class="inp">
+                                <div class="paragrafo"><p>Vendedor:</p></div>
+                                <div class="marg"><input type="radio" name="Conta" value="v"required></div>
+                            </div>
+                            <div class="inp">
+                                <div class="paragrafo"><p>Cliente:</p></div>
+                                <div class="marg"><input type="radio" name="Cliente" value="c"required></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input1">
+                        <p>Senha</p>
+                        <input type="password" id="Senha" name="Senha" placeholder="Digite sua senha" maxlength="10" required>
+                    </div>
                     <div>
-                        <img src="imagens/cell.png" alt=""
-                        width="800px" height="500px">
+                        <input type="submit" name="enviar" value="Enviar">
                     </div>
-                    <div class="text">
-                        <h1> 3V3 E BATALHA ROYALE</h1>
-                        <P>Hora de brigar! Junte-se a seus amigos e prepare-se para o MAYHEM multijogador épico! Brawl Stars é o mais novo jogo dos criadores de Clash of Clans e Clash Royale. Entre no seu modo de jogo favorito e jogue partidas rápidas com seus amigos. Atire neles, exploda-os, dê um soco neles e vença o BRAWL.</P>
-                    </div>
-
+                </form>
             </div>
-
-        </section>
-
-        <section id="Informaçao" class="faces">
-            <div class="video">
-                <iframe width="1000" height="520" src="https://www.youtube.com/embed/wuvCjwrVyK8" title="Brawl Stars Meets Paris Saint-Germain at Parc des Princes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <footer>
-            <p>No nosso site de Brawl Stars, dedicamo-nos a oferecer o melhor conteúdo para os fãs deste jogo emocionante. Aqui, você encontrará guias detalhados, dicas estratégicas, análises de personagens, e as últimas novidades e atualizações. Nosso objetivo é ajudar jogadores de todos os níveis a melhorarem suas habilidades e aproveitarem ao máximo o mundo de Brawl Stars. Junte-se à nossa comunidade e domine a arena com conhecimento e diversão!
-            </p>
-        </footer>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
-
-
 </html>
